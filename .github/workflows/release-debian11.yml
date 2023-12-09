@@ -36,7 +36,7 @@ jobs:
       - name: 'Install dependencies debian11'
         run: |
           apt-get update
-          apt-get install -y sudo curl
+          apt-get install -y sudo curl wget
 
       - name: 'Setup Rust'
         uses: dtolnay/rust-toolchain@stable
