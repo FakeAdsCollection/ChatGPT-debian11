@@ -29,7 +29,7 @@
 
 ## 📦 Install
 
-- [📝 Update Log](https://github.com/lencx/ChatGPT/UPDATE_LOG.md)
+- [📝 Update Log](https://github.com/lencx/ChatGPT/blob/main/UPDATE_LOG.md)
 - [🕒 History versions...](https://github.com/lencx/ChatGPT/releases)
 
 <!-- tr-download-start -->
