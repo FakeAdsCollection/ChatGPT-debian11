@@ -1,7 +1,7 @@
 <p align="center">
   <img width="180" src="./public/logo.png" alt="ChatGPT">
   <h1 align="center">ChatGPT (Built for Debian 11 or Ubuntu 20.04)</h1>
-  <p align="center">ChatGPT Desktop Application (Available Debian 11 or Ubuntu 20.04)</p>
+  <p align="center">ChatGPT Desktop Application (Available on Debian 11 or Ubuntu 20.04)</p>
 </p>
 
 [![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
