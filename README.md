@@ -1,11 +1,10 @@
 <p align="center">
   <img width="180" src="./public/logo.png" alt="ChatGPT">
-  <h1 align="center">ChatGPT (Built for Debian 11 or Ubuntu 20.04)</h1>
-  <p align="center">ChatGPT Desktop Application (Available on Debian 11 or Ubuntu 20.04)</p>
+  <h1 align="center">ChatGPT (Built for Debian 11 and Ubuntu 20.04)</h1>
+  <p align="center">ChatGPT Desktop Application (Available on Debian 11 and Ubuntu 20.04)</p>
 </p>
 
 [![English badge](https://img.shields.io/badge/%E8%8B%B1%E6%96%87-English-blue)](./README.md)
-[![简体中文 badge](https://img.shields.io/badge/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-Simplified%20Chinese-blue)](./README-ZH_CN.md)\
 [![ChatGPT downloads](https://img.shields.io/github/downloads/lencx/ChatGPT/total.svg?style=flat-square)](https://github.com/lencx/ChatGPT/releases)
 [![chat](https://img.shields.io/badge/chat-discord-blue?style=flat&logo=discord)](https://discord.gg/aPhCRf4zZr)
 [![twitter](https://img.shields.io/badge/follow-lencx__-blue?style=flat&logo=Twitter)](https://twitter.com/lencx_)
