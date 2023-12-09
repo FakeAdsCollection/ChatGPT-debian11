@@ -129,7 +129,7 @@
       ]
     },
       "updater": {
-      "active": false,
+      "active": true,
       "dialog": false,
       "endpoints": [
         "https://lencx.github.io/ChatGPT/install.json"
