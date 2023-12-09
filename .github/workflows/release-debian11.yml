@@ -58,7 +58,7 @@ jobs:
       - name: Install rust target
         run: rustup target add ${{ matrix.target }}
 
-      - run: pnpm build --target ${{ matrix.target }}
+      - run: pnpm build --target ${{ matrix.target }} --verbose
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAURI_PRIVATE_KEY: ${{ secrets.TAURI_PRIVATE_KEY }}
