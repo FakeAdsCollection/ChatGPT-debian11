@@ -5,6 +5,8 @@ on: workflow_dispatch
 jobs:
   build-chatgpt:
     runs-on: ${{ matrix.os }}
+    container:
+     image: debian:bullseye
     strategy:
       fail-fast: false
       matrix:
@@ -68,8 +70,6 @@ jobs:
   release-chatgpt:
     needs: build-chatgpt
     runs-on: ubuntu-latest
-    container:
-     image: debian:bullseye
     steps:
       - uses: actions/checkout@v3
 
