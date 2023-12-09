@@ -87,12 +87,6 @@ jobs:
           name: artifacts-x86_64
           path: artifacts/x86_64
 
-      - name: Download aarch64 artifacts
-        uses: actions/download-artifact@v3
-        with:
-          name: artifacts-aarch64
-          path: artifacts/aarch64
-
       - name: Rename artifacts
         run: |
         
