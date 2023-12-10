@@ -94,6 +94,58 @@ pub fn dalle2_window(
   }
 }
 
+pub fn copilot_window(
+  handle: &tauri::AppHandle,
+  query: Option<String>,
+  title: Option<String>,
+  is_new: Option<bool>,
+) {
+  info!("copilot_query: {:?}", query);
+  let theme = AppConf::theme_mode();
+  let app = handle.clone();
+
+  let query = if query.is_some() {
+    format!("window.addEventListener('DOMContentLoaded', function() {{\nwindow.__CHATGPT_QUERY__='{}';\n}})", query.unwrap())
+  } else {
+    "".to_string()
+  };
+
+  let label = if is_new.unwrap_or(true) {
+    let timestamp = SystemTime::now()
+      .duration_since(SystemTime::UNIX_EPOCH)
+      .unwrap()
+      .as_secs();
+    format!("copilot_{}", timestamp)
+  } else {
+    "copilot".to_string()
+  };
+
+  if app.get_window("copilot").is_none() {
+    tauri::async_runtime::spawn(async move {
+      WindowBuilder::new(
+        &app,
+        label,
+        WindowUrl::App("https://copilot.microsoft.com".into()),
+      )
+      .title(title.unwrap_or_else(|| "Microsoft Copilot".to_string()))
+      .resizable(true)
+      .fullscreen(false)
+      .inner_size(800.0, 600.0)
+      .always_on_top(false)
+      .theme(Some(theme))
+      .initialization_script(&load_script("core.js"))
+      .initialization_script(&load_script("dalle2.js"))
+      .initialization_script(&query)
+      .build()
+      .unwrap();
+    });
+  } else {
+    let copilot_win = app.get_window("copilot").unwrap();
+    copilot_win.show().unwrap();
+    copilot_win.set_focus().unwrap();
+  }
+}
+
 pub fn sponsor_window(handle: tauri::AppHandle) {
   tauri::async_runtime::spawn(async move {
     if let Some(win) = handle.get_window("sponsor") {
