@@ -189,6 +189,7 @@ pub fn init() -> Menu {
     Menu::new()
       .add_item(CustomMenuItem::new("app_website", "ChatGPT User's Guide"))
       .add_item(CustomMenuItem::new("dalle2", "DALL·E 2"))
+      .add_item(CustomMenuItem::new("copilot", "Microsoft Copilot"))
       .add_native_item(MenuItem::Separator)
       .add_native_item(MenuItem::Minimize)
       .add_native_item(MenuItem::Zoom),
@@ -363,6 +364,7 @@ pub fn menu_handler(event: WindowMenuEvent<tauri::Wry>) {
     }
     // Window
     "dalle2" => window::dalle2_window(&app, None, None, Some(false)),
+    "copilot" => window::copilot_window(&app, None, None, Some(false)),
     // View
     "zoom_0" => win.eval("window.__zoom0 && window.__zoom0()").unwrap(),
     "zoom_out" => win.eval("window.__zoomOut && window.__zoomOut()").unwrap(),
