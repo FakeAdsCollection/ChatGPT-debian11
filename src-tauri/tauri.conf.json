@@ -118,6 +118,22 @@
           "domain": "openai.com",
           "enableTauriAPI": true
         },
+          "windows": [
+            "core",
+            "main",
+            "tray"
+          ],
+          "domain": "copilot.microsoft.com",
+          "enableTauriAPI": true
+        },
+          "windows": [
+            "core",
+            "main",
+            "tray"
+          ],
+          "domain": "login.live.com",
+          "enableTauriAPI": true
+        },
         {
           "windows": [
             "chatgpt_sponsors",
